@@ -78,6 +78,15 @@ const btnEng = document.querySelector('.lng-btn-eng');
 const btnUaMob = document.querySelector('.lng-btn-mob-ua');
 const btnEngMob = document.querySelector('.lng-btn-mob-eng');
 
+function lngDefault() {
+   let hash = window.location.hash;
+   hash = hash.substr(1);
+   if (!hash) {
+      location.href = window.location.pathname + '#eng';
+   }
+}
+lngDefault();
+
 if (btnUa) {
    btnUa.addEventListener('click', function () {
       location.href = window.location.pathname + '#ua';
@@ -147,4 +156,5 @@ new Swiper('.image-slider', {
          slidesPerView: 3,
       },
    },
+   slideToClickedSlide: true,
 });
