@@ -128,10 +128,10 @@ changeLanguage();
 
 //slider
 new Swiper('.image-slider', {
-   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-   },
+   // navigation: {
+   //    nextEl: '.swiper-button-next',
+   //    prevEl: '.swiper-button-prev'
+   // },
    pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -158,3 +158,13 @@ new Swiper('.image-slider', {
    },
    slideToClickedSlide: true,
 });
+
+//message
+document.querySelector('.footer__content__button').onclick = function () {
+   let message = document.querySelector('.your_text').value;
+   const token = '1707669875:AAEYfPGGficX6EpsPQQwCiORtQIg3blh3Ao';
+   let url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=504248892&text=';
+   let xhttp = new XMLHttpRequest();
+   xhttp.open("GET", url + message, true);
+   xhttp.send();
+}

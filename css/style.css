@@ -134,6 +134,7 @@ header {
 .about {
   background-color: #f6f6f6;
   text-align: center;
+  padding: 80px 0;
 }
 
 .about__content {
@@ -149,7 +150,7 @@ header {
 }
 
 .about__content__title {
-  margin: 120px auto 0;
+  margin: 0 auto;
   font-size: 34px;
   line-height: 42px;
 }
@@ -179,14 +180,16 @@ header {
 
 .text-3 {
   max-width: 310px;
-  margin-bottom: 110px;
+}
+
+.skills {
+  padding: 80px 0;
 }
 
 .skills__title {
   font-size: 34px;
   line-height: 42px;
   text-align: center;
-  padding-top: 90px;
 }
 
 .skills__text {
@@ -197,7 +200,7 @@ header {
 }
 
 .skills__list {
-  margin: 80px 0 110px;
+  margin: 80px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,7 +295,7 @@ header {
 
 .gallery {
   background-color: #f6f6f6;
-  padding: 113px 0 50px;
+  padding: 50px 0;
 }
 
 .gallery__title {
@@ -317,8 +320,7 @@ header {
 
 .image-slider .swiper-button-prev::after,
 .image-slider .swiper-button-next::after {
-  font-size: 50px;
-  font-weight: bold;
+  display: none;
 }
 
 .image-slider .swiper-pagination-bullet {
@@ -336,7 +338,7 @@ header {
 }
 
 .footer__content__title {
-  margin-top: 115px;
+  padding-top: 50px;
   font-size: 34px;
   line-height: 42px;
 }
@@ -384,7 +386,7 @@ header {
 
 .footer__content__social {
   max-width: 345px;
-  margin: 85px auto 45px;
+  margin: 45px auto 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,10 +416,33 @@ header {
 }
 
 .footer__content__text-bottom {
-  margin-bottom: 123px;
+  margin-bottom: 50px;
   font-size: 14px;
   line-height: 17px;
   color: #828282;
+}
+
+.footer_link {
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+}
+
+.footer_link:hover {
+  text-decoration: underline;
+}
+
+.your_text {
+  display: block;
+  max-width: 30%;
+  min-width: 250px;
+  min-height: 80px;
+  padding: 10px;
+  margin: 0 auto 30px;
+}
+
+.tel {
+  margin-top: 20px;
 }
 
 @font-face {
