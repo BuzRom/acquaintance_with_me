@@ -160,11 +160,15 @@ new Swiper('.image-slider', {
 });
 
 //message
-document.querySelector('.footer__content__button').onclick = function () {
+document.querySelector('.footer__content__button').addEventListener('click', () => {
    let message = document.querySelector('.your_text').value;
    const token = '1707669875:AAEYfPGGficX6EpsPQQwCiORtQIg3blh3Ao';
    let url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=504248892&text=';
    let xhttp = new XMLHttpRequest();
    xhttp.open("GET", url + message, true);
    xhttp.send();
-}
+});
+
+document.querySelector('.form').addEventListener('submit', function name(e) {
+   e.preventDefault(false);
+});
