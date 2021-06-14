@@ -36,11 +36,11 @@ const lngArr = {
       'eng': document.innerHTML = "Hi, I'm Roman – Front-end developer from Cherkasy. <span>I'm interested in web-design, coding and everything connected with it.</span>",
    },
    'about-text-2': {
-      'ua': 'Я навчаюсь в IT Академії по курсу "Front-end"',
-      'eng': document.innerHTML = "I'm studying at <span>\"Front-end\"</span> courses in IT-Academy.",
+      'ua': 'З початку поточного року, я навчаюсь в IT Академії "Шаг" за курсом "Front-end"',
+      'eng': document.innerHTML = "Since the beginning of this year, I'm studying at <span>\"Front-end\"</span> courses in IT-Academy \"Step\"",
    },
    'about-text-3': {
-      'ua': 'Готовий втілювати чудові проєки з неймовірними людьми',
+      'ua': 'Готовий допомогти втілювати чудові проєки з професійними людьми',
       'eng': 'Ready to implement excellent projects with wonderful people.',
    },
    'skills-title': {

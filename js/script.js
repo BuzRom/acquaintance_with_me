@@ -39,12 +39,12 @@ else {
 const btnMenu = document.querySelector('.btn_menu');
 const menuBody = document.querySelector('.menu__body');
 if (btnMenu) {
-   btnMenu.addEventListener('click', function (e) {
+   btnMenu.addEventListener('click', () => {
       document.body.classList.toggle('_lock');
       menuBody.classList.toggle('_active');
       btnMenu.classList.toggle('_active');
    });
-}
+};
 
 
 //scroll onclick
@@ -70,48 +70,56 @@ if (menuLinks.length > 0) {
          e.preventDefault();
       }
    }
+   const sections = document.querySelectorAll('section');
+
+   onscroll = function () {
+      let scrollPosition = document.documentElement.scrollTop;
+
+      sections.forEach((section) => {
+         if (scrollPosition >= section.offsetTop - section.offsetHeight * 0.25 &&
+            scrollPosition < section.offsetTop + section.offsetHeight - section.offsetHeight * 0.25) {
+            const currentId = section.attributes.id.value;
+            menuLinks.forEach(menuLink => {
+               menuLink.classList.remove('nav_activ');
+            });
+            addActiveClass(currentId);
+         }
+      });
+   }
 };
+function addActiveClass(id) {
+   let selector = `a[data-goto=".${id}__nav"]`;
+   document.querySelector(selector).classList.add('nav_activ');
+}
 
 //language
-const btnUa = document.querySelector('.lng-btn-ua');
-const btnEng = document.querySelector('.lng-btn-eng');
-const btnUaMob = document.querySelector('.lng-btn-mob-ua');
-const btnEngMob = document.querySelector('.lng-btn-mob-eng');
+const btnUa = document.querySelectorAll('.lng-btn-ua');
+const btnEng = document.querySelectorAll('.lng-btn-eng');
 
 function lngDefault() {
    let hash = window.location.hash;
    hash = hash.substr(1);
    if (!hash) {
       location.href = window.location.pathname + '#eng';
+      // btnEng.forEach(a => a.classList.add('lng_activ'));
    }
 }
 lngDefault();
 
-if (btnUa) {
-   btnUa.addEventListener('click', function () {
-      location.href = window.location.pathname + '#ua';
-      location.reload();
-   });
-};
-if (btnEng) {
-   btnEng.addEventListener('click', function () {
-      location.href = window.location.pathname + '#eng';
-      location.reload();
-   });
-};
 
-if (btnUaMob) {
-   btnUaMob.addEventListener('click', function () {
-      location.href = window.location.pathname + '#ua';
-      location.reload();
-   });
-};
-if (btnEngMob) {
-   btnEngMob.addEventListener('click', function () {
-      location.href = window.location.pathname + '#eng';
-      location.reload();
-   });
-};
+btnUa.forEach(a => a.addEventListener('click', () => {
+   location.href = window.location.pathname + '#ua';
+   // btnEng.forEach(a => a.classList.remove('lng_activ'));
+   // btnUa.forEach(a => a.classList.add('lng_activ'));
+   location.reload();
+}));
+
+btnEng.forEach(a => a.addEventListener('click', () => {
+   location.href = window.location.pathname + '#eng';
+   // btnUa.forEach(a => a.classList.remove('lng_activ'));
+   // btnEng.forEach(a => a.classList.add('lng_activ'));
+   location.reload();
+}));
 
 function changeLanguage() {
    let hash = window.location.hash;
@@ -121,7 +129,6 @@ function changeLanguage() {
       if (elem) {
          elem.innerHTML = lngArr[key][hash];
       }
-
    }
 }
 changeLanguage();
@@ -171,4 +178,5 @@ document.querySelector('.footer__content__button').addEventListener('click', () 
 
 document.querySelector('.form').addEventListener('submit', function name(e) {
    e.preventDefault(false);
+   document.querySelector('.your_text').value = '';
 });

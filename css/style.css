@@ -30,7 +30,7 @@ header {
   height: 88px;
 }
 
-.header__list__item a {
+.header__list__item .menu__link {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
   line-height: 22px;
@@ -38,12 +38,21 @@ header {
   color: #828282;
 }
 
-.header__list__item a:hover {
+.header__list__item .menu__link:hover {
   color: black;
 }
 
 .mobile__button-block {
   display: none;
+}
+
+.nav_activ {
+  color: black !important;
+  text-decoration: underline;
+}
+
+.lng_activ {
+  color: black !important;
 }
 
 .btn_menu {
@@ -369,9 +378,9 @@ header {
 }
 
 .footer__content__button:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-box-shadow: 4px 4px 5px #969696;
           box-shadow: 4px 4px 5px #969696;
 }
@@ -692,7 +701,7 @@ img {
     margin-top: 35px;
   }
 
-  .header__list__item > a {
+  .header__list__item > .menu__link {
     font-size: 34px;
     line-height: 42px;
   }
