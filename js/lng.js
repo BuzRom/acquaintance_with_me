@@ -19,6 +19,14 @@ const lngArr = {
       'ua': 'Контакти',
       'eng': 'Contacts',
    },
+   'nav-btn1': {
+      'ua': 'УКР',
+      'eng': 'UKR',
+   },
+   'nav-btn2': {
+      'ua': 'АНГ',
+      'eng': 'ENG',
+   },
    'hero-title': {
       'ua': document.innerHTML = 'Роман <span>Бузуков</span>',
       'eng': document.innerHTML = 'Roman <span>Buzukov</span>',
@@ -26,6 +34,14 @@ const lngArr = {
    'hero-text': {
       'ua': document.innerHTML = 'Front-end розробник <span>36 років, м. Черкаси</span>',
       'eng': document.innerHTML = 'Front-end developer <span>36 years old, Cherkasy</span>',
+   },
+   'hero-btn1': {
+      'ua': 'УКР',
+      'eng': 'UKR',
+   },
+   'hero-btn2': {
+      'ua': 'АНГ',
+      'eng': 'ENG',
    },
    'about-title': {
       'ua': 'Про себе',

@@ -1,6 +1,5 @@
 'use strict'
 
-
 //mobile or pc
 const isMobile = {
    Android: () => {
@@ -34,6 +33,7 @@ if (isMobile.any()) {
 else {
    document.body.classList.add('_pc');
 };
+
 
 //menu burger
 const btnMenu = document.querySelector('.btn_menu');
@@ -92,32 +92,34 @@ function addActiveClass(id) {
    document.querySelector(selector).classList.add('nav_activ');
 }
 
+
 //language
 const btnUa = document.querySelectorAll('.lng-btn-ua');
 const btnEng = document.querySelectorAll('.lng-btn-eng');
 
 function lngDefault() {
    let hash = window.location.hash;
-   hash = hash.substr(1);
-   if (!hash) {
+   if (hash === '#eng') {
+      btnUa.forEach(a => a.classList.remove('lng_activ'));
+      btnEng.forEach(a => a.classList.add('lng_activ'));
+   }
+   else if (hash === '#ua') {
+      btnEng.forEach(a => a.classList.remove('lng_activ'));
+      btnUa.forEach(a => a.classList.add('lng_activ'));
+   }
+   else {
       location.href = window.location.pathname + '#eng';
-      // btnEng.forEach(a => a.classList.add('lng_activ'));
    }
 }
 lngDefault();
 
-
 btnUa.forEach(a => a.addEventListener('click', () => {
    location.href = window.location.pathname + '#ua';
-   // btnEng.forEach(a => a.classList.remove('lng_activ'));
-   // btnUa.forEach(a => a.classList.add('lng_activ'));
    location.reload();
 }));
 
 btnEng.forEach(a => a.addEventListener('click', () => {
    location.href = window.location.pathname + '#eng';
-   // btnUa.forEach(a => a.classList.remove('lng_activ'));
-   // btnEng.forEach(a => a.classList.add('lng_activ'));
    location.reload();
 }));
 
@@ -133,6 +135,7 @@ function changeLanguage() {
 }
 changeLanguage();
 
+
 //slider
 new Swiper('.image-slider', {
    // navigation: {
@@ -143,9 +146,9 @@ new Swiper('.image-slider', {
       el: '.swiper-pagination',
       clickable: true,
       dynamicBullets: true,
-      renderBullet: function (index, className) {
-         return '<span class="' + className + '">' + (index + 1) + '</span>';
-      },
+      // renderBullet: function (index, className) {
+      //    return '<span class="' + className + '">' + (index + 1) + '</span>';
+      // },
    },
    scrollbar: {
       el: '.swiper-scrollbar',
@@ -165,6 +168,7 @@ new Swiper('.image-slider', {
    },
    slideToClickedSlide: true,
 });
+
 
 //message
 document.querySelector('.footer__content__button').addEventListener('click', () => {
