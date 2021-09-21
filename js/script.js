@@ -138,10 +138,10 @@ changeLanguage();
 
 //slider
 new Swiper('.image-slider', {
-   // navigation: {
-   //    nextEl: '.swiper-button-next',
-   //    prevEl: '.swiper-button-prev'
-   // },
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+   },
    pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -150,10 +150,10 @@ new Swiper('.image-slider', {
       //    return '<span class="' + className + '">' + (index + 1) + '</span>';
       // },
    },
-   scrollbar: {
-      el: '.swiper-scrollbar',
-      draggable: true,
-   },
+   // scrollbar: {
+   //    el: '.swiper-scrollbar',
+   //    draggable: true,
+   // },
    autoHeight: true,
    spaceBetween: 30,
    loop: true,
@@ -166,7 +166,7 @@ new Swiper('.image-slider', {
          slidesPerView: 3,
       },
    },
-   slideToClickedSlide: true,
+   slideToClickedSlide: false,
 });
 
 

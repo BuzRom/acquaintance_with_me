@@ -364,6 +364,21 @@ header {
   background-color: #c1c1c1c1;
 }
 
+.gallery:hover .swiper-button-prev::after,
+.gallery:hover .swiper-button-next::after {
+  display: block;
+  color: #fff;
+}
+
+.gallery:hover .swiper-button-prev,
+.gallery:hover .swiper-button-next {
+  background-color: #000;
+  opacity: 0.6;
+  border-radius: 10px;
+  width: 50px;
+  height: 60px;
+}
+
 .footer__content {
   width: 60%;
   margin: 0 auto;
@@ -573,7 +588,7 @@ body {
 }
 
 p {
-  line-height: 1.16667;
+  line-height: 1.1666666667;
 }
 
 * {
