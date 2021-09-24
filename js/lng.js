@@ -33,7 +33,7 @@ const lngArr = {
    },
    'hero-text': {
       'ua': document.innerHTML = 'Front-end розробник <span>36 років, м. Черкаси</span>',
-      'eng': document.innerHTML = 'Front-end developer <span>36 years old, Cherkasy</span>',
+      'eng': document.innerHTML = 'Front-end Developer <span>36 years old, Cherkasy</span>',
    },
    'hero-btn1': {
       'ua': 'УКР',
@@ -49,7 +49,7 @@ const lngArr = {
    },
    'about-text-1': {
       'ua': "Привіт, мене звати Роман - я Front-end розробник з м.Черкаси. Цікавлюсь web-дизайном, розробкою програмного забеспечення і всім, що пов'язано із цим.",
-      'eng': document.innerHTML = "Hi, I'm Roman – Front-end developer from Cherkasy. <span>I'm interested in web-design, coding and everything connected with it.</span>",
+      'eng': document.innerHTML = "Hi, I'm Roman – Front-end Developer from Cherkasy. <span>I'm interested in web-design, coding and everything connected with it.</span>",
    },
    'about-text-2': {
       'ua': 'З початку поточного року, я навчаюсь в IT Академії "Шаг" за курсом "Front-end"',

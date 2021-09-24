@@ -137,7 +137,7 @@ changeLanguage();
 
 
 //slider
-new Swiper('.image-slider', {
+new Swiper('.swiper-container', {
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
@@ -171,7 +171,7 @@ new Swiper('.image-slider', {
 
 
 //message
-document.querySelector('.footer__content__button').addEventListener('click', () => {
+document.querySelector('.footer__button').addEventListener('click', () => {
    let message = document.querySelector('.your_text').value;
    const token = '1707669875:AAEYfPGGficX6EpsPQQwCiORtQIg3blh3Ao';
    let url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=504248892&text=';
