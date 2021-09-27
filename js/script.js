@@ -171,16 +171,14 @@ new Swiper('.swiper-container', {
 
 
 //message
-document.querySelector('.footer__button').addEventListener('click', () => {
-   let message = document.querySelector('.your_text').value;
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', e => {
+   e.preventDefault();
    const token = '1707669875:AAEYfPGGficX6EpsPQQwCiORtQIg3blh3Ao';
    let url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=504248892&text=';
    let xhttp = new XMLHttpRequest();
-   xhttp.open("GET", url + message, true);
+   xhttp.open("GET", url + form.message.value, true);
    xhttp.send();
-});
-
-document.querySelector('.form').addEventListener('submit', function name(e) {
-   e.preventDefault(false);
-   document.querySelector('.your_text').value = '';
+   form.message.value = '';
 });

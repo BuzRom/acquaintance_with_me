@@ -680,6 +680,16 @@ img {
   .hero__img {
     margin: 37px auto 83px;
   }
+
+  .gallery:hover .swiper-button-prev::after,
+  .gallery:hover .swiper-button-next::after {
+    display: none;
+  }
+
+  .gallery:hover .swiper-button-prev,
+  .gallery:hover .swiper-button-next {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
