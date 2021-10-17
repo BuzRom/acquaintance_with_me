@@ -136,16 +136,41 @@ function changeLanguage() {
 changeLanguage();
 
 
-//slider
-new Swiper('.swiper-container', {
-   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+//slider Swiper
+const swiper1 = new Swiper('.swiper-skills', {
+   pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
    },
+   spaceBetween: 90,
+   slidesPerGroup: 2,
+   slidesPerView: 1,
+   breakpoints: {
+      450: {
+         slidesPerView: 2,
+      },
+      750: {
+         slidesPerView: 3,
+      },
+      950: {
+         slidesPerView: 4,
+      },
+   },
+   scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+   },
+   slideToClickedSlide: false,
+});
+
+const swiper2 = new Swiper('.swiper-container', {
+   // navigation: {
+   //    nextEl: '.swiper-button-next',
+   //    prevEl: '.swiper-button-prev'
+   // },
    pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      dynamicBullets: true,
       // renderBullet: function (index, className) {
       //    return '<span class="' + className + '">' + (index + 1) + '</span>';
       // },
@@ -154,9 +179,9 @@ new Swiper('.swiper-container', {
    //    el: '.swiper-scrollbar',
    //    draggable: true,
    // },
+   loop: true,
    autoHeight: true,
    spaceBetween: 30,
-   loop: true,
    slidesPerView: 1,
    breakpoints: {
       650: {
