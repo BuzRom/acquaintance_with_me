@@ -142,18 +142,51 @@ const swiper1 = new Swiper('.swiper-skills', {
       el: ".swiper-pagination",
       clickable: true,
    },
-   spaceBetween: 90,
-   slidesPerGroup: 2,
-   slidesPerView: 1,
+   // spaceBetween: 120,
    breakpoints: {
+      300: {
+         slidesPerView: 1,
+         slidesPerGroup: 1,
+      },
       450: {
+         spaceBetween: 90,
          slidesPerView: 2,
+         slidesPerGroup: 1,
+      },
+      550: {
+         spaceBetween: 130,
+         slidesPerView: 2,
+         slidesPerGroup: 1,
+      },
+      650: {
+         spaceBetween: 180,
+         slidesPerView: 2,
+         slidesPerGroup: 1,
       },
       750: {
          slidesPerView: 3,
+         spaceBetween: 90,
+         slidesPerGroup: 2,
+      },
+      850: {
+         slidesPerView: 3,
+         spaceBetween: 110,
+         slidesPerGroup: 2,
       },
       950: {
          slidesPerView: 4,
+         spaceBetween: 70,
+         slidesPerGroup: 2,
+      },
+      1050: {
+         slidesPerView: 4,
+         spaceBetween: 90,
+         slidesPerGroup: 2,
+      },
+      1150: {
+         slidesPerView: 4,
+         spaceBetween: 110,
+         slidesPerGroup: 2,
       },
    },
    scrollbar: {
@@ -207,3 +240,21 @@ form.addEventListener('submit', e => {
    xhttp.send();
    form.message.value = '';
 });
+
+//Bubbles
+function createBubble() {
+   const section = document.querySelector('.footer section')
+   console.log(section);
+   const createElement = document.createElement('span')
+   let size = Math.random() * 60;
+
+   createElement.style.width = 20 + size + 'px';
+   createElement.style.height = 20 + size + 'px';
+   createElement.style.left = Math.random() * innerWidth + "px";
+   section.appendChild(createElement);
+
+   setTimeout(() => {
+      createElement.remove()
+   }, 4000)
+}
+setInterval(createBubble, 100)
