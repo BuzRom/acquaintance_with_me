@@ -142,7 +142,6 @@ const swiper1 = new Swiper('.swiper-skills', {
       el: ".swiper-pagination",
       clickable: true,
    },
-   // spaceBetween: 120,
    breakpoints: {
       300: {
          slidesPerView: 1,
@@ -201,17 +200,14 @@ const swiper2 = new Swiper('.swiper-container', {
    //    nextEl: '.swiper-button-next',
    //    prevEl: '.swiper-button-prev'
    // },
+   autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+   },
    pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      // renderBullet: function (index, className) {
-      //    return '<span class="' + className + '">' + (index + 1) + '</span>';
-      // },
    },
-   // scrollbar: {
-   //    el: '.swiper-scrollbar',
-   //    draggable: true,
-   // },
    loop: true,
    autoHeight: true,
    spaceBetween: 30,
@@ -240,21 +236,3 @@ form.addEventListener('submit', e => {
    xhttp.send();
    form.message.value = '';
 });
-
-//Bubbles
-function createBubble() {
-   const section = document.querySelector('.footer section')
-   console.log(section);
-   const createElement = document.createElement('span')
-   let size = Math.random() * 60;
-
-   createElement.style.width = 20 + size + 'px';
-   createElement.style.height = 20 + size + 'px';
-   createElement.style.left = Math.random() * innerWidth + "px";
-   section.appendChild(createElement);
-
-   setTimeout(() => {
-      createElement.remove()
-   }, 4000)
-}
-setInterval(createBubble, 100)

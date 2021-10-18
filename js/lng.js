@@ -11,9 +11,9 @@ const lngArr = {
       'ua': 'Навички',
       'eng': 'Skill',
    },
-   'nav-gallery': {
-      'ua': 'Галерея',
-      'eng': 'Gallery',
+   'nav-portfolio': {
+      'ua': 'Портфоліо',
+      'eng': 'Portfolio',
    },
    'nav-contacts': {
       'ua': 'Контакти',
@@ -75,9 +75,9 @@ const lngArr = {
       'ua': 'Каскадні Таблиці Стилів',
       'eng': 'Cascading Style Sheets',
    },
-   'gallery-title': {
-      'ua': 'Галерея',
-      'eng': 'Gallery',
+   'portfolio-title': {
+      'ua': 'Портфоліо',
+      'eng': 'Portfolio',
    },
    'footer-title': {
       'ua': 'Контакти',
