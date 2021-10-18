@@ -143,48 +143,54 @@ const swiper1 = new Swiper('.swiper-skills', {
       clickable: true,
    },
    breakpoints: {
-      300: {
+      200: {
+         spaceBetween: 150,
          slidesPerView: 1,
          slidesPerGroup: 1,
       },
-      450: {
-         spaceBetween: 90,
-         slidesPerView: 2,
+      400: {
+         spaceBetween: 220,
+         slidesPerView: 1,
          slidesPerGroup: 1,
       },
-      550: {
+      750: {
          spaceBetween: 130,
          slidesPerView: 2,
          slidesPerGroup: 1,
       },
-      650: {
-         spaceBetween: 180,
+      800: {
+         spaceBetween: 130,
          slidesPerView: 2,
          slidesPerGroup: 1,
       },
-      750: {
-         slidesPerView: 3,
-         spaceBetween: 90,
-         slidesPerGroup: 2,
-      },
       850: {
-         slidesPerView: 3,
-         spaceBetween: 110,
-         slidesPerGroup: 2,
+         slidesPerView: 2,
+         spaceBetween: 170,
+         slidesPerGroup: 1,
       },
       950: {
-         slidesPerView: 4,
-         spaceBetween: 70,
-         slidesPerGroup: 2,
+         slidesPerView: 2,
+         spaceBetween: 240,
+         slidesPerGroup: 1,
       },
       1050: {
-         slidesPerView: 4,
+         slidesPerView: 3,
          spaceBetween: 90,
+         slidesPerGroup: 2,
+      },
+      1100: {
+         slidesPerView: 3,
+         spaceBetween: 100,
          slidesPerGroup: 2,
       },
       1150: {
-         slidesPerView: 4,
+         slidesPerView: 3,
          spaceBetween: 110,
+         slidesPerGroup: 2,
+      },
+      1250: {
+         slidesPerView: 3,
+         spaceBetween: 140,
          slidesPerGroup: 2,
       },
    },
@@ -201,7 +207,7 @@ const swiper2 = new Swiper('.swiper-container', {
    //    prevEl: '.swiper-button-prev'
    // },
    autoplay: {
-      delay: 2500,
+      delay: 4000,
       disableOnInteraction: false,
    },
    pagination: {
@@ -212,15 +218,6 @@ const swiper2 = new Swiper('.swiper-container', {
    autoHeight: true,
    spaceBetween: 30,
    slidesPerView: 1,
-   breakpoints: {
-      650: {
-         slidesPerView: 2,
-      },
-      900: {
-         slidesPerView: 3,
-      },
-   },
-   slideToClickedSlide: false,
 });
 
 
@@ -236,3 +233,11 @@ form.addEventListener('submit', e => {
    xhttp.send();
    form.message.value = '';
 });
+
+//flash-light
+const about = document.documentElement;
+
+about.addEventListener('mousemove', e => {
+   about.style.setProperty('--x', e.clientX + 'px')
+   about.style.setProperty('--y', e.clientY - 150 + 'px')
+})
