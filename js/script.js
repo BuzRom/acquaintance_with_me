@@ -1,38 +1,38 @@
 'use strict'
 
 //mobile or pc
-const isMobile = {
-   Android: () => {
-      return navigator.userAgent.match(/Android/i);
-   },
-   BlackBerry: () => {
-      return navigator.userAgent.match(/BlackBerry/i);
-   },
-   iOS: () => {
-      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-   },
-   Opera: () => {
-      return navigator.userAgent.match(/Opera Mini/i);
-   },
-   Windows: () => {
-      return navigator.userAgent.match(/IEMobile/i);
-   },
-   any: () => {
-      return (
-         isMobile.Android() ||
-         isMobile.BlackBerry() ||
-         isMobile.iOS() ||
-         isMobile.Opera() ||
-         isMobile.Windows()
-      );
-   }
-};
-if (isMobile.any()) {
-   document.body.classList.add('_touch');
-}
-else {
-   document.body.classList.add('_pc');
-};
+// const isMobile = {
+//    Android: () => {
+//       return navigator.userAgent.match(/Android/i);
+//    },
+//    BlackBerry: () => {
+//       return navigator.userAgent.match(/BlackBerry/i);
+//    },
+//    iOS: () => {
+//       return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+//    },
+//    Opera: () => {
+//       return navigator.userAgent.match(/Opera Mini/i);
+//    },
+//    Windows: () => {
+//       return navigator.userAgent.match(/IEMobile/i);
+//    },
+//    any: () => {
+//       return (
+//          isMobile.Android() ||
+//          isMobile.BlackBerry() ||
+//          isMobile.iOS() ||
+//          isMobile.Opera() ||
+//          isMobile.Windows()
+//       );
+//    }
+// };
+// if (isMobile.any()) {
+//    document.body.classList.add('_touch');
+// }
+// else {
+//    document.body.classList.add('_pc');
+// };
 
 
 //menu burger
@@ -234,7 +234,7 @@ form.addEventListener('submit', e => {
    form.message.value = '';
 });
 
-//flash-light
+// flash-light
 const about = document.documentElement;
 
 about.addEventListener('mousemove', e => {
