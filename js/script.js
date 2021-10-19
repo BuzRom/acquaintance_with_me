@@ -313,5 +313,9 @@ class HoverButton {
    }
 }
 
-const text = document.querySelector('.hero__text');
-new HoverButton(text);
+window.onresize = function () {
+   if (window.innerWidth > 812) {
+      const text = document.querySelector('.hero__text');
+      new HoverButton(text);
+   }
+}
