@@ -314,8 +314,6 @@ class HoverButton {
 }
 
 window.onresize = function () {
-   if (window.innerWidth > 812) {
-      const text = document.querySelector('.hero__text');
-      new HoverButton(text);
-   }
+   (window.innerWidth > 812) ? new HoverButton(document.querySelector('.hero__text')) : null
 }
+window.onresize()
