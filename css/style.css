@@ -521,8 +521,8 @@
 
 .portfolio .swiper-wrapper .swiper-slide img {
   border-radius: 12px;
-  -webkit-filter: brightness(0.7);
-          filter: brightness(0.7);
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 
 .portfolio .swiper-wrapper .demo-link {
