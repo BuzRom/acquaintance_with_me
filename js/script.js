@@ -208,11 +208,13 @@ const initHovers = () => {
       item.addEventListener("mouseleave", mainNavItemMouseLeave);
    });
 
-   const footerButton = document.querySelectorAll(".footer__button");
-   footerButton.forEach(item => {
-      item.addEventListener("mouseenter", mainNavItemMouseEnter);
-      item.addEventListener("mouseleave", mainNavItemMouseLeave);
-   });
+   const textareaBorder = document.querySelector(".textarea-border");
+   textareaBorder.addEventListener("mouseenter", mainNavItemMouseEnter);
+   textareaBorder.addEventListener("mouseleave", mainNavItemMouseLeave);
+
+   const footerButton = document.querySelector(".footer__button");
+   footerButton.addEventListener("mouseenter", mainNavItemMouseEnter);
+   footerButton.addEventListener("mouseleave", mainNavItemMouseLeave);
 };
 initHovers();
 
